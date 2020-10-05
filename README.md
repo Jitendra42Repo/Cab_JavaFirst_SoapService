@@ -13,12 +13,12 @@
 
 2. Implement the WS-Security from WS-Standard for Authentication: 
 
-I. Add "CXF WS Security" dependency in pom.xml for WS-Securiy support. 
-II. Instantiate WSS4JInInterceptor and add it to the enpoint for enabling the Security Interceptor. Configure "WSSecurity ACTION" as USERNAME_TOKEN PROFILE.
+I. Add "CXF WS Security" dependency in pom.xml for WS-Securiy support.           
+II. Instantiate WSS4JInInterceptor and add it to the enpoint for enabling the Security Interceptor. Configure "WSSecurity ACTION" as USERNAME_TOKEN PROFILE.        
 III. Configure the "CallbackHandler" as PWCallBackHandler class. Implement "handle(Callback[] callbacks)" method from CallbackHandler (interface) to autheticate 
-the username in the request from in-memory database.
+the username in the request from in-memory database.         
 
-SOAP UI Testing: Add the following wsse:security tag in the request soapenv:Header. Otherwise the service will return soap:Fault.
+3. SOAP UI Testing: Add the following wsse:security tag in the request soapenv:Header. Otherwise the service will return soap:Fault.
 
 
 <soapenv:Header> 
